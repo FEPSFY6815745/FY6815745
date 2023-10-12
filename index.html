@@ -21,7 +21,6 @@
         <style>
               table {
                 font-family: arial, sans-serif;
-                border-collapse: collapse;
                 width: 30%;
           
               td, th {
@@ -33,7 +32,34 @@
               tr:nth-child(even) {
                 background-colour: #ffc300;
               }
+                     
+           table.rounded-corners {
+                border-spacing: 0;
+                border-collapse: seperate;
+                border-radius: 15px;
+              }
 
+                /* Apply a border to the right of all but the last column*/
+                table.rounded-corners th:not(:last-child),
+                table.rounded-corners td:not(:last-child) {
+                 border-right: 1px solid black;
+                }
+
+                /* Apply a border to the bottom of all but the last row */
+table.rounded-corners>thead>tr:not(:last-child)>th,
+table.rounded-corners>thead>tr:not(:last-child)>td,
+table.rounded-corners>tbody>tr:not(:last-child)>th,
+table.rounded-corners>tbody>tr:not(:last-child)>td,
+table.rounded-corners>tfoot>tr:not(:last-child)>th,
+table.rounded-corners>tfoot>tr:not(:last-child)>td,
+table.rounded-corners>tr:not(:last-child)>td,
+table.rounded-corners>tr:not(:last-child)>th,
+table.rounded-corners>thead:not(:last-child),
+table.rounded-corners>tbody:not(:last-child),
+table.rounded-corners>tfoot:not(:last-child) {
+ border-bottom: 1px solid black;
+}
+         
           
         </style>
 
@@ -73,34 +99,7 @@
          <tr>
            <td><a href="#References">References</td>
          </tr>
-                     
-           table.rounded-corners {
-                border-spacing: 0;
-                border-collapse: seperate;
-                border-radius: 15px;
-              }
 
-                /* Apply a border to the right of all but the last column*/
-                table.rounded-corners th:not(:last-child),
-                table.rounded-corners td:not(:last-child) {
-                 border-right: 1px solid black;
-                }
-
-                /* Apply a border to the bottom of all but the last row */
-table.rounded-corners>thead>tr:not(:last-child)>th,
-table.rounded-corners>thead>tr:not(:last-child)>td,
-table.rounded-corners>tbody>tr:not(:last-child)>th,
-table.rounded-corners>tbody>tr:not(:last-child)>td,
-table.rounded-corners>tfoot>tr:not(:last-child)>th,
-table.rounded-corners>tfoot>tr:not(:last-child)>td,
-table.rounded-corners>tr:not(:last-child)>td,
-table.rounded-corners>tr:not(:last-child)>th,
-table.rounded-corners>thead:not(:last-child),
-table.rounded-corners>tbody:not(:last-child),
-table.rounded-corners>tfoot:not(:last-child) {
- border-bottom: 1px solid black;
-}
-         
        </table>
 
        
