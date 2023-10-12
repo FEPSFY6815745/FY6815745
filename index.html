@@ -34,7 +34,14 @@
               table.rounded-corners th, table.rounded-corners td {
                 border: 1px solid #000000;
               }
-          
+
+                /*Apply a border to the bottom of all but the last row*/
+                table.rounded-corners>tr:not(:last-child)>td,
+                tabel.rounded-corners>tr:not(:last-child)>th {
+                  border-bottom: 1px solid #000000; 
+                }
+                  
+             
               td, th {
                 border: 1px solid #000000;
                 text-align: left;
