@@ -82,26 +82,24 @@
     </style>
 
       <style>
-        .3column {
-          display:flex;
-          flexwrap:wrap;
+        .column {
+          float: left;
+          width: 33.33%;
+          padding: 15px;
+        }
+        
+        .row::after {
+          content: "";
+          display: table;
+          clear: both;
         }
 
-        .image1 {
-          width: 30%;
-          text-align:left;
+        .screen and (max-width:600px) {
+          .column {
+            width: 100%;
+            }
         }
-
-        .image2 {
-          width: 30%;
-          text-align:middle;
-        }
-
-        .image3 {
-          width: 30%;
-          text-align:right;
-        }
-   </style>
+</style>
         
       <style>
 
@@ -227,10 +225,22 @@
           Nautilus shells are frequently linked to the golden ratio, making them a notable symbol of this mathematical concept. However, the belief that these shells perfectly align with the golden ratio has been
           proven inaccurate. Research has found that these shells have an aspect ratio of 1.310 across the Nautilus genus (<a href= #Bartlett>Bartlett</a>, 2019). Additionally, other studies have reported findings of an aspect 
           ratio of 1.33, which is a ratio of 4:3 (<a href= #Fablo>Fablo</a>, 2005). Neither of these ratios are equivalent to the golden ratio, which is approximately 1.618…
-          <div class="3column">
-          <div class="image1"> <center><img src="Golden ratio graph.PNG"></center> </div> <div class="image2"><center><img src="1 to 1.33 ratio graph.PNG"></center></div><div class="image3"><center><img src="Nautilus shell.PNG"></center></div>
-          </div>
-            
+       
+            <div class="row">
+  <div class="column">
+  	<p><img src="Golden ratio graph.PNG"></p>
+  </div>
+  
+  <div class="column">
+
+    <p><img src="1 to 1.33 ratio graph.PNG"></p>
+  </div>
+  
+  <div class="column">
+
+    <p><img src="Nautilus shell.PNG"></p>
+  </div>
+</div>
         </pre>
       </p>
        
