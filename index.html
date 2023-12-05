@@ -141,7 +141,7 @@
         }        
       
         a:hover {
-          color: hotpink;
+          color: #FFC026;
           text-decoration: underline;
         }
               
@@ -184,7 +184,13 @@
              <td><a href="#Discussion">Discussion</td>
            </tr>
            <tr>
+             <td><a href="#Conclusion">Conclusion</td>
+           </tr>
+           <tr>
              <td><a href="#References">References</td>
+           </tr>
+           <tr>
+             <td><a href="#Presentation">Presentation</td>
            </tr>
         </tbody>
        </table>
@@ -221,8 +227,8 @@
         <pre class="pre">
           The golden ratio, represented by φ, is a mathematical concept that has captivated the minds of scholars, artists, and nature enthusiasts for centuries. This irrational number is also called the divine proportion and the 
           golden section as well as many other names. This ratio, approximately 1.618, has been observed and admired in various elements of nature, from the intricate patterns of sunflowers (<a href= #Mathai>Mathai et al.</a>, 1974), the veins 
-          of dragonfly wings (<a href= #Huang>Huang et al.</a>, 2023) and in the human body (<a href= #Ulmer>Ulmer, et al.</a>, 2009). In this article, I will explore the appearances
-          of the golden ratio in nature, examining its prevalence in different organisms and its role in creating visually appealing and harmonious structures.
+          of dragonfly wings (<a href= #Huang>Huang et al.</a>, 2023) and in the human body (<a href= #Ulmer>Ulmer, et al.</a>, 2009). In this article, I will explore the appearances of the golden ratio in nature, examining its relevance 
+          in different organisms and its role in creating visually appealing and harmonious structures.
         </pre>
       </p>
 
@@ -278,10 +284,19 @@
           </div>
           <div class="image"><center><img src="Vitruvian man.jpg" height="280"></center><center>Figure 6 - Vitruvian man (<a href= #Golden>Golden ratio in Human Body</a>, 2022)</center></div>
           </div>
-          
+           
         </pre>
       </p>
-       
+         
+        <h3 id="Conclusion">Conclusion</h3>
+      <p>
+        <p class="ex1">
+        <pre class="pre">
+          The golden ratio, with its prevalence in spirals, branching patterns, facial and body proportions, and its influence on art and design, presents a unique connection between mathematics 
+          and the natural world. This ratio, often associated with beauty and aesthetics, acts as a reminder of the interconnectedness between mathematics, art, and the world around us.
+
+        </pre>
+       </p>
        <h3 id="References">References</h3>
       <p>
         <p class="ex1">
@@ -322,7 +337,83 @@
       <hr>
           </div>
      
+        
+          <h2 id="Presentation">Conference Presentation: From faces to flowers: Exploring the golden ratios appearence in nature</h2>
+  
+          <script>
+            var slideImages = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG"];
+            var currentSlide = 0;
 
-       
+            function showSlide() {
+              document.getElementById('slide').src = slideImages[currentSlide];
+            }
+
+            function nextSlide() {
+              currentSlide = (currentSlide + 1) % slideImages.length;
+            }
+
+            function prevSlide() {
+              currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+            }
+
+            function showSlideNumber(slideNumber) {
+              currentSlide = slideNumber - 1;
+              showSlide();
+            }
+              
+            showSlide();
+          </script>
+          <div id="slide-container">
+           <img id="slide" src="Slide1.JPG" alt="Slide 1" style="width:100%; max-width:800px;">
+
+          <div class="button-container">
+            <button class="button" onclick="prevSlide()">Previous</button>
+            <button class="button" onclick="nextSlide()">Next</button>
+          </div>
+
+            <div class="slide-number-container">
+              <button class="button" onclick="showSlideNumber(1)">1</button>
+              <button class="button" onclick="showSlideNumber(2)">2</button>
+              <button class="button" onclick="showSlideNumber(3)">3</button>
+              <button class="button" onclick="showSlideNumber(4)">4</button>
+              <button class="button" onclick="showSlideNumber(5)">5</button>
+            </div>
+
+            
+          </div>
+          <style>
+            #slide-container {
+              text-align: center;
+              position: relative;
+            }
+
+            .button-container {
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              margin-botttom: -100px;
+            }
+
+            .button {
+              padding: 10px 20px;
+              background-color: #FFC026;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+              margin: 0 5px;
+            }
+
+            .slide-number-container {
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              margin-bottom: -50px;
+            }
+            
+          </style>
      </body> 
 </html>
